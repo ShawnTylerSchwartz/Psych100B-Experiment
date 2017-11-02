@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/jspsych.js"></script>
+    <script src="src/plugins/jspsych-instructions.js"></script>
+    <link rel="stylesheet" href="src/css/jspsych.css"></link>
+  </head>
+  <body>
+    <div id="jspsych-target"></div>
+  </body>
+  <script>
+
+  var instructions_block = {
+    type: 'instructions',
+    pages: [
+      'Welcome to the C.A.S. Psych 100B Experiment. When ready, click next to begin.',
+      'You will begin by answering a series of questions.',
+      'Your complete honesty in your answers is important for the validity of this study.',
+      'Please turn off all cell phones and distracting materials. Are you ready? Click Next Now.'
+    ],
+    show_clickable_nav: true
+  }
+  
+  var start_questions_block = {
+      type: ''
+  }
+
+  jsPsych.init({
+    display_element: $('#jspsych-target'),
+    timeline: [instructions_block],
+    on_finish: function(){ jsPsych.data.displayData(); }
+  });
+
+  </script>
+</html>
