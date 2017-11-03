@@ -24,23 +24,30 @@
     show_clickable_nav: true
   }
   
+/*
+    this demo will only work if run online or with special permissions enable offline
+    for chrome, launch the browser from the command-line:
+    chrome --allow-file-access-from-files
+    */
+
   var check_consent = function(elem) {
-      if ($('#consent_checkbox').is(':checked')) {
-          return true;
-      } else {
-          alert("If you agree with the instructions and with to participate in our Psych 100B Experiment, you must check the box next to the statement 'I agree to participate in this Psych 100B study.'");
-          return false;
-      }
+    if ($('#consent_checkbox').is(':checked')) {
+      return true;
+    } else {
+      alert("If you wish to participate, you must check the box next to the statement 'I agree to participate in this study.'");
       return false;
+    }
+    return false;
   };
-      
+
   var consent_block = {
-      "type": "html",
-      "force_refresh": true,
-      "url": "external_html/simple_consent.html",
-      "cont_btn": "start",
-      "check_fn": check_consent
+    "type": "html",
+    "force_refresh": true,
+    "url": "external_html/simple_consent.html",
+    "cont_btn": "start",
+    "check_fn": check_consent
   }
+
   
   var block_one_questions = [ "How old are you?", "Where were you born?" ];
   
