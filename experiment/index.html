@@ -4,6 +4,8 @@
     <script src="src/js/jquery.min.js"></script>
     <script src="src/jspsych.js"></script>
     <script src="src/plugins/jspsych-instructions.js"></script>
+    <script src="src/plugins/jspsych-html.js"></script>
+    <script src="src/plugins/jspsych-survey-text.js"></script>
     <link rel="stylesheet" href="src/css/jspsych.css"></link>
   </head>
   <body>
@@ -22,13 +24,35 @@
     show_clickable_nav: true
   }
   
-  var start_questions_block = {
-      type: ''
+  var check_consent = function(elem) {
+      if ($('#consent_checkbox').is(':checked')) {
+          return true;
+      } else {
+          alert("If you agree with the instructions and with to participate in our Psych 100B Experiment, you must check the box next to the statement 'I agree to participate in this Psych 100B study.'");
+          return false;
+      }
+      return false;
+  };
+      
+  var consent_block = {
+      "type": "html",
+      "force_refresh": true,
+      "url": "external_html/simple_consent.html",
+      "cont_btn": "start",
+      "check_fn": check_consent
   }
+  
+  var block_one_questions = [ "How old are you?", "Where were you born?" ];
+  
+  
+  var questions_block_one = {
+      type: 'survey-text',
+      questions: block_one_questions
+  };
 
   jsPsych.init({
     display_element: $('#jspsych-target'),
-    timeline: [instructions_block],
+    timeline: [instructions_block, consent_block, questions_block_one], 
     on_finish: function(){ jsPsych.data.displayData(); }
   });
 
