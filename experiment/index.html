@@ -59,7 +59,8 @@
 
   jsPsych.init({
     display_element: $('#jspsych-target'),
-    timeline: [instructions_block, consent_block, questions_block_one], 
+    timeline: [consent_block],
+    //timeline: [instructions_block, consent_block, questions_block_one], 
     on_finish: function(){ jsPsych.data.displayData(); }
   });
 
