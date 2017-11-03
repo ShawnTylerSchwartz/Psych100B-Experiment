@@ -6,56 +6,89 @@
     <script src="src/plugins/jspsych-instructions.js"></script>
     <script src="src/plugins/jspsych-html.js"></script>
     <script src="src/plugins/jspsych-survey-text.js"></script>
+    <script src="src/plugins/jspsych-survey-multi-choice.js"></script>
     <link rel="stylesheet" href="src/css/jspsych.css"></link>
   </head>
+
   <body>
     <div id="jspsych-target"></div>
   </body>
+  
   <script>
-
-  var instructions_block = {
-    type: 'instructions',
-    pages: [
-      'Welcome to the C.A.S. Psych 100B Experiment. When ready, click next to begin.',
-      'You will begin by answering a series of questions.',
-      'Your complete honesty in your answers is important for the validity of this study.',
-      'Please turn off all cell phones and distracting materials. Are you ready? Click Next Now.'
-    ],
-    show_clickable_nav: true
-  }
-
-  var check_consent = function(elem) {
-    if ($('#consent_checkbox').is(':checked')) {
-      return true;
-    } else {
-      alert("If you wish to participate, you must check the box next to the statement 'I agree to participate in this study.'");
-      return false;
+    var instructions_block = {
+      type: 'instructions',
+      pages: [
+        'Welcome to the C.A.S. Psych 100B Experiment. When ready, click next to begin.',
+        'You will begin by answering a series of questions.',
+        'Your complete honesty in your answers is important for the validity of this study.',
+        'Please turn off all cell phones and distracting materials. Are you ready? Click Next Now.'
+      ],
+      show_clickable_nav: true
     }
-    return false;
-  };
 
-  var consent_block = {
-    "type": "html",
-    "force_refresh": true,
-    "url": "src/external_html/simple_consent.html",
-    "cont_btn": "start",
-    "check_fn": check_consent
-  }
+    var check_consent = function(elem) {
+      if ($('#consent_checkbox').is(':checked')) {
+        return true;
+      } else {
+        alert("If you agree to all of the instructions presented wish to participate in our Psych 100B Experiment, you must check the box next to the statement 'I agree to participate in this Psych 100B Experiment.'");
+        return false;
+      }
+      return false;
+    };
 
-  
-  var block_one_questions = [ "How old are you?", "Where were you born?" ];
-  
-  
-  var questions_block_one = {
+    var consent_block = {
+      "type": "html",
+      "force_refresh": true,
+      "url": "src/external_html/simple_consent.html",
+      "cont_btn": "start",
+      "check_fn": check_consent
+    }
+
+    // All Question Set Arrays - Demographic Question Sets
+    var block_one_questions = [ "Age", "How many years have you been in college?", "What is your major?" ];
+    var block_two_questions = [ "Gender", "Race/Ethnicity" ];
+    var block_three_questions = [ "Do you have a job?" ];
+    var block_four_questions = [ "What is your pay rate in dollars per hour? (*Enter Number Only*)", "How many hours a week do you work? (*Enter Number Only*)" ];
+    var block_five_questions = [ "Have you eaten breakfast today?" ];
+    var block_six_questions = [ "When did you last have caffeine?" ];
+    var block_seven_questions = [ "How many hours did you sleep last night?" ];
+
+    // All Question Scales
+    var gender_options = [ "Male", "Female", "Other" ];
+    var race_options = [ "White", "Hispanic/Latino", "African American", "American Indian", "Asian", "Other" ];
+    var yn_options = [ "Yes", "No" ];
+    var caf_options = [ "This Morning", "Yesterday Evening", "Yesterday Afternoon", "Yesterday Morning", "I haven't consumed caffeine in the last 48 hours." ];
+    var sleep_options = [ "0-2 Hours", "2-4 Hours", "4-6 Hours", "6-8 Hours", "8 or more Hours" ];
+
+    // Likert Question Scaling Sets - After the Demographic Question Sets
+    var happiness_scale_questions = [ "I am happy today." ];
+    var comfort_scale_questions = [ "I am comfortable at this moment in time." ];
+    var behere_scale_questions = [ "I would rather be somewhere else." ];
+    var judgemental_scale_question = [ "I follow the latest fashion trends." ];
+    var level_of_agreement_scale = [ "Strongly Disagree", "Disagree", "Somewhat Disagree", "Neither Agree Nor Disagree", "Somehwat Agree", "Agree", "Strongly Agree" ];
+
+
+    // TODO::For the distractor task give an accidentally embarrasing video and ask them how funny it is to them?
+
+    var questions_block_one = {
       type: 'survey-text',
       questions: block_one_questions
-  };
+    };
 
-  jsPsych.init({
-    display_element: $('#jspsych-target'),
-    timeline: [instructions_block, consent_block, questions_block_one], 
-    on_finish: function(){ jsPsych.data.displayData(); }
-  });
+    var questions_block_two = {
+      type: 'survey-multi-choice',
+      questions: block_two_questions,
+      options: [gender_options, race_options],
+      required: [true],
+      horizontal: true
+    };
+
+    jsPsych.init({
+      display_element: $('#jspsych-target'),
+      timeline: [instructions_block, consent_block, questions_block_one], 
+      on_finish: function(){ jsPsych.data.displayData(); }
+    });
 
   </script>
+
 </html>
