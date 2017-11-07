@@ -186,6 +186,17 @@
     var resume_male_normalweight = {
       stimulus: 'src/stimuli/STIM_M_NW.jpg',
     }
+    
+    var node = {
+      type: 'single-stim',
+      timeline: [resume_male_normalweight],
+      choices: [89, 78], // Y or N
+      prompt: '<p class="center-content">Have you seen this face before? Y or N.</p>',
+      data: {
+        node_data: true
+      }
+    }
+
 
     jsPsych.init({
       display_element: $('#jspsych-target'),
