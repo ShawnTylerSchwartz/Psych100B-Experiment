@@ -145,18 +145,46 @@
       pages: [
         'You are now finished with the questions. Click next to continue.',
         'You are the hiring manager at the <strong>McGullin Law Firm</strong>, one of the most reputable law firms in all of Southern California. You are looking for someone to replace one of your star employees who is preparing to retire later this year. You are hoping that this new employee will live up to the standards that your soon-to-be retired employee has set throughout their time at the firm. Click next to continue.',
-        'You have received the Curriculum Vitae\'s (CV\'s) of two applications who are both extremely qualified for this position.',
+        'You have received the Curriculum Vitae\'s (CV\'s) of two applicants who are both extremely qualified for this position.',
         'Please take as much time as you need to review the applicant\'s resume.',
         'When you are done reviewing the resume, click next. You will not be able to go back to the resume after you click next.',
         'Are you ready? Click next to begin.',
         'You will now be presented with a resume for a job applicant to your <strong>law firm</strong>.'
       ],
       show_clickable_nav: true
-    }
+    };
+    
+    var resume_male_normalweight = {
+      "type": "html",
+      "force_refresh": true,
+      "url": "src/external_html/john_curtis.html",
+      "cont_btn": "start"
+    };
+    
+    var resume_male_overweight = {
+      "type": "html",
+      "force_refresh": true,
+      "url": "src/external_html/jake_cooper.html",
+      "cont_btn": "start"
+    };
+    
+    var resume_female_normalweight = {
+      "type": "html",
+      "force_refresh": true,
+      "url": "src/external_html/jane_conner.html",
+      "cont_btn": "start"
+    };
+    
+    var resume_female_overweight = {
+      "type": "html",
+      "force_refresh": true,
+      "url": "src/external_html/jill_carter.html",
+      "cont_btn": "start"
+    };
 
     jsPsych.init({
       display_element: $('#jspsych-target'),
-      timeline: [intro_instructions_block, consent_block, questions_block_one, questions_block_two, questions_block_three, questions_block_four, questions_block_five, questions_block_six, questions_block_seven, likert_block_one, likert_block_two, likert_block_three, likert_block_four, post_survey_instructions_block], 
+      timeline: [intro_instructions_block, consent_block, questions_block_one, questions_block_two, questions_block_three, questions_block_four, questions_block_five, questions_block_six, questions_block_seven, likert_block_one, likert_block_two, likert_block_three, likert_block_four, post_survey_instructions_block, resume_male_normalweight, resume_male_overweight, resume_female_normalweight, resume_female_overweight], 
       on_finish: function(){ jsPsych.data.displayData(); }
     });
   </script>
