@@ -183,25 +183,34 @@
 //      "cont_btn": "start"
 //    };
     
-    var resume_male_normalweight = {
-      stimulus: 'src/stimuli/STIM_M_NW.jpg',
-    }
+//    var resume_male_normalweight = {
+//      stimulus: 'src/stimuli/STIM_M_NW.jpg',
+//    };
+//    
+//    var node = {
+//      type: 'single-stim',
+//      timeline: [resume_male_normalweight],
+//      choices: [89, 78], // Y or N
+//      prompt: '<p class="center-content">Have you seen this face before? Y or N.</p>',
+//      data: {
+//        node_data: true
+//      }
+//    };
     
-    var node = {
-      type: 'single-stim',
-      timeline: [resume_male_normalweight],
-      choices: [89, 78], // Y or N
-      prompt: '<p class="center-content">Have you seen this face before? Y or N.</p>',
-      data: {
-        node_data: true
-      }
-    }
+    var test_instr_img = {
+      type: 'instructions',
+      pages: [
+        'You are now finished with the questions. Click next to continue. <img src="https://pbs.twimg.com/profile_images/839721704163155970/LI_TRk1z_400x400.jpg" />',
+        'You will now be presented with a resume for a job applicant to your <strong>law firm</strong>.'
+      ],
+      show_clickable_nav: true
+    };
 
 
     jsPsych.init({
       display_element: $('#jspsych-target'),
 //      timeline: [intro_instructions_block, consent_block, questions_block_one, questions_block_two, questions_block_three, questions_block_four, questions_block_five, questions_block_six, questions_block_seven, likert_block_one, likert_block_two, likert_block_three, likert_block_four, post_survey_instructions_block, resume_male_normalweight], 
-      timeline: [node],
+      timeline: [test_instr_img],
       on_finish: function(){ jsPsych.data.displayData(); }
     });
   </script>
