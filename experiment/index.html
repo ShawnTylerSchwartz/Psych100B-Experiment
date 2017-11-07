@@ -8,6 +8,7 @@
     <script src="src/plugins/jspsych-survey-text.js"></script>
     <script src="src/plugins/jspsych-survey-multi-choice.js"></script>
     <script src="src/plugins/jspsych-survey-likert.js"></script>
+    <script src="src/plugins/jspsych-single-stim.js"></script>
     <link rel="stylesheet" href="src/css/jspsych.css"></link>
   </head>
 
@@ -154,37 +155,42 @@
       show_clickable_nav: true
     };
     
+//    var resume_male_normalweight = {
+//      "type": "html",
+//      "force_refresh": true,
+//      "url": "src/external_html/john_curtis.html",
+//      "cont_btn": "start"
+//    };
+//    
+//    var resume_male_overweight = {
+//      "type": "html",
+//      "force_refresh": true,
+//      "url": "src/external_html/jake_cooper.html",
+//      "cont_btn": "start"
+//    };
+//    
+//    var resume_female_normalweight = {
+//      "type": "html",
+//      "force_refresh": true,
+//      "url": "src/external_html/jane_conner.html",
+//      "cont_btn": "start"
+//    };
+//    
+//    var resume_female_overweight = {
+//      "type": "html",
+//      "force_refresh": true,
+//      "url": "src/external_html/jill_carter.html",
+//      "cont_btn": "start"
+//    };
+    
     var resume_male_normalweight = {
-      "type": "html",
-      "force_refresh": true,
-      "url": "src/external_html/john_curtis.html",
-      "cont_btn": "start"
-    };
-    
-    var resume_male_overweight = {
-      "type": "html",
-      "force_refresh": true,
-      "url": "src/external_html/jake_cooper.html",
-      "cont_btn": "start"
-    };
-    
-    var resume_female_normalweight = {
-      "type": "html",
-      "force_refresh": true,
-      "url": "src/external_html/jane_conner.html",
-      "cont_btn": "start"
-    };
-    
-    var resume_female_overweight = {
-      "type": "html",
-      "force_refresh": true,
-      "url": "src/external_html/jill_carter.html",
-      "cont_btn": "start"
-    };
+      stimulus: 'src/stimuli/STIM_M_NW.jpg',
+    }
 
     jsPsych.init({
       display_element: $('#jspsych-target'),
-      timeline: [intro_instructions_block, consent_block, questions_block_one, questions_block_two, questions_block_three, questions_block_four, questions_block_five, questions_block_six, questions_block_seven, likert_block_one, likert_block_two, likert_block_three, likert_block_four, post_survey_instructions_block, resume_male_overweight], 
+//      timeline: [intro_instructions_block, consent_block, questions_block_one, questions_block_two, questions_block_three, questions_block_four, questions_block_five, questions_block_six, questions_block_seven, likert_block_one, likert_block_two, likert_block_three, likert_block_four, post_survey_instructions_block, resume_male_normalweight], 
+      timeline: [resume_male_normalweight],
       on_finish: function(){ jsPsych.data.displayData(); }
     });
   </script>
