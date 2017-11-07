@@ -162,12 +162,12 @@
 //      "cont_btn": "start"
 //    };
 //    
-    var resume_male_overweight = {
-      "type": "html",
-      "force_refresh": true,
-      "url": "src/external_html/jake_cooper.html",
-      "cont_btn": "start"
-    };
+//    var resume_male_overweight = {
+//      "type": "html",
+//      "force_refresh": true,
+//      "url": "src/external_html/jake_cooper.html",
+//      "cont_btn": "start"
+//    };
 //    
 //    var resume_female_normalweight = {
 //      "type": "html",
@@ -197,20 +197,29 @@
 //      }
 //    };
     
-//    var resume_male_normalweight = {
-//      type: 'instructions',
-//      pages: [
-//        '<h1>Meet John Curtis, JD</h1><br /><br /><center><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/STIM_M_NW.jpg" /></center>',
-//        'You will now be presented with a resume for a job applicant to your <strong>law firm</strong>.'
-//      ],
-//      show_clickable_nav: true
-//    };
+    var resume_male_normalweight = {
+      type: 'instructions',
+      pages: [
+        '<h2>Meet John Curtis, JD</h2><br /><br /><center><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/STIM_M_NW.jpg" /><br /><br /><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/John_Curtis_Resume.png"</center>',
+        'You will now answer some questions about <strong>John Curtis, JD</strong>. Click next to continue.'
+      ],
+      show_clickable_nav: true
+    };
+    
+    var resume_male_overweight = {
+      type: 'instructions',
+      pages: [
+        '<h2>Meet Jake Cooper, JD</h2><br /><br /><center><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/STIM_M_OW.jpg" /><br /><br /><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/Jake_Cooper_Resume.png"</center>',
+        'You will now answer some questions about <strong>Jake Cooper, JD</strong>. Click next to continue.'
+      ],
+      show_clickable_nav: true
+    };
 
 
     jsPsych.init({
       display_element: $('#jspsych-target'),
 //      timeline: [intro_instructions_block, consent_block, questions_block_one, questions_block_two, questions_block_three, questions_block_four, questions_block_five, questions_block_six, questions_block_seven, likert_block_one, likert_block_two, likert_block_three, likert_block_four, post_survey_instructions_block, resume_male_normalweight], 
-      timeline: [resume_male_overweight],
+      timeline: [resume_male_normalweight, resume_male_overweight],
       on_finish: function(){ jsPsych.data.displayData(); }
     });
   </script>
