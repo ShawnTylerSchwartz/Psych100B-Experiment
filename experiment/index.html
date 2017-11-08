@@ -197,24 +197,88 @@
 //      }
 //    };
     
+    
+    // Stimulus Resume Likert Question Scaling Sets
+    var teamwork_ability = [ "How likely do you think this applicant will be at working with a team?" ];
+    var social_competence = [ "How likely do you think this applicant is socially competent?" ];
+    var job_efficiency = [ "How likely do you think this applicant will be efficient in the workplace?" ];
+    var intelligence = [ "How likely is it that this applicant is intelligent?" ];
+    var motivation = [ "How likely is it that this applicant is motivated?" ];
+    var leadership_skills = [ "How likely is it that this appicant has leadership skills?" ];
+    var likely_scale = [ "Extremely Unlikely", "Unlikely", "Neutral", "Likely", "Extremely Likely" ];
+    
     var resume_male_normalweight = {
       type: 'instructions',
       pages: [
-        '<h2>Meet John Curtis, JD</h2><br /><br /><center><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/STIM_M_NW.jpg" /><br /><br /><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/John_Curtis_Resume.png" width="550px" /></center>',
-        'You will now answer some questions about <strong>John Curtis, JD</strong>. Click next to continue.'
+        '<h2>Meet John Curtis, JD</h2><br /><br /><center><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/STIM_M_NW.jpg" /><br /><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/John_Curtis_Resume.png" width="550px" /></center>',
+        'You will now answer some questions about <strong>John Curtis, JD</strong>. Click next to continue.',
+        '<center><h1>JAKE COOPER</h1><h3>48 Frederick St., Apartment 203 Cambridge, MA 02138</h3><h4>jcooper@hls.harvard.edu &bull; 978-555-4422</h4><br /><h6>EDUCATION</h6><strong>Harvard Law School</strong>, Cambridge, MA, J.D., June 2017<br />Activies: Harvard Law Students Association, <em>Co-President</em>, Harvard Human Rights Journal, <em>Member</em>'
       ],
       show_clickable_nav: true
     };
     
+    var likert_resume_male_normalweight_one = {
+      type: 'survey-likert',
+      questions: teamwork_ability,
+      labels: [likely_scale]
+    };
+    
+    var likert_resume_male_normalweight_two = {
+      type: 'survey-likert',
+      questions: social_competence,
+      labels: [likely_scale]
+    }
+    
+    var likert_resume_male_normalweight_three = {
+      type: 'survey-likert',
+      questions: job_efficiency,
+      labels: [likely_scale]
+    }
+    
+    var likert_resume_male_normalweight_four = {
+      type: 'survey-likert',
+      questions: intelligence,
+      labels: [likely_scale]
+    }
+    
+    var likert_resume_male_normalweight_five = {
+      type: 'survey-likert',
+      questions: motivation,
+      labels: [likely_scale]
+    }
+    
+    var likert_resume_male_normalweight_six = {
+      type: 'survey-likert',
+      questions: leadership_skills,
+      labels: [likely_scale]
+    }
+
     var resume_male_overweight = {
       type: 'instructions',
       pages: [
-        '<h2>Meet Jake Cooper, JD</h2><br /><br /><center><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/STIM_M_OW.jpg" /><br /><br /><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/Jake_Cooper_Resume.png"</center>',
+        '<h2>Meet Jake Cooper, JD</h2><br /><br /><center><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/STIM_M_OW.jpg" /><br /><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/Jake_Cooper_Resume.png" width="550px" /></center>',
         'You will now answer some questions about <strong>Jake Cooper, JD</strong>. Click next to continue.'
       ],
       show_clickable_nav: true
     };
-
+    
+    var resume_female_normalweight = {
+      type: 'instructions',
+      pages: [
+        '<h2>Meet Jane Conner, JD</h2><br /><br /><center><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/STIM_F_NW.jpg" /><br /><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/Jane_Conner_Resume.png" width="550px" /></center>',
+        'You will now answer some questions about <strong>Jane Conner, JD</strong>. Click next to continue.'
+      ],
+      show_clickable_nav: true
+    };
+    
+    var resume_female_overweight = {
+      type: 'instructions',
+      pages: [
+        '<h2>Meet Jill Curtis, JD</h2><br /><br /><center><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/STIM_F_OW.jpg" /><br /><img src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/stimuli/Jill_Curtis_Resume.png" width="550px" /></center>',
+        'You will now answer some questions about <strong>Jill Curtis, JD</strong>. Click next to continue.'
+      ],
+      show_clickable_nav: true
+    };
 
     jsPsych.init({
       display_element: $('#jspsych-target'),
