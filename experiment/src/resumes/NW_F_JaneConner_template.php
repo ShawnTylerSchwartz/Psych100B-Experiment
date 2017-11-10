@@ -1,6 +1,6 @@
 <br />
 <center>
-  <img src="../stimuli/NW_F_JaneConner.jpg" />
+  <img src="../../src/stimuli/NW_F_JaneConner.jpg" />
 </center>
 <center>
   <h1>JANE CONNER</h1>
