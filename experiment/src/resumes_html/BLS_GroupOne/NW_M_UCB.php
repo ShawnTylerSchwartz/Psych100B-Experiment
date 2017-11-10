@@ -2,9 +2,11 @@
   <head>
     <title>NW_M_UCB</title>
     <link rel="stylesheet" href="../../css/jspsych.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
-    <div class="resumeContainer">
+    <div class="container">
       <center>
         <img src="../../stimuli/NW_M_JohnCurtis.jpg" />
       </center>
@@ -19,7 +21,7 @@
       <strong>Harvard Law School</strong>, Cambridge, MA, J.D., June 2017
       <br />Activies: Harvard Law Students Association, <em>Co-President</em>, Harvard Human Rights Journal, <em>Member</em>
       <br /><br />
-      <center><?php include('UCB_template.php'); ?></center>
+      <?php include('UCB_template.php'); ?>
     </div>
   </body>
 </html>
