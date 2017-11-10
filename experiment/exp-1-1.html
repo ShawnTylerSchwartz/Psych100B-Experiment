@@ -281,11 +281,92 @@
       text: 'You are subject A (BLS Group 1-1) . Press any key to continue.'
     };
     
+    var if_trial_B = {
+      type: 'text',
+      text: 'You are subject B (BLS Group 1-2) . Press any key to continue.'
+    };
+    
+    var if_trial_C = {
+      type: 'text',
+      text: 'You are subject C (BLS Group 1-3) . Press any key to continue.'
+    };
+    
+    var if_trial_D = {
+      type: 'text',
+      text: 'You are subject D (BLS Group 1-4) . Press any key to continue.'
+    };
+    
+    var if_trial_E = {
+      type: 'text',
+      text: 'You are subject E (BLS Group 2-1) . Press any key to continue.'
+    };
+    
+    var if_trial_F = {
+      type: 'text',
+      text: 'You are subject F (BLS Group 2-2) . Press any key to continue.'
+    };
+    
+    var if_trial_G = {
+      type: 'text',
+      text: 'You are subject G (BLS Group 2-3) . Press any key to continue.'
+    };
+    
+    var if_trial_H = {
+      type: 'text',
+      text: 'You are subject H (BLS Group 2-4) . Press any key to continue.'
+    };
+    
+    var if_trial_I = {
+      type: 'text',
+      text: 'You are subject I (BLS Group 3-1) . Press any key to continue.'
+    };
+    
+    var if_trial_J = {
+      type: 'text',
+      text: 'You are subject J (BLS Group 3-2) . Press any key to continue.'
+    };
+    
+    var if_trial_K = {
+      type: 'text',
+      text: 'You are subject K (BLS Group 3-3) . Press any key to continue.'
+    };
+    
+    var if_trial_L = {
+      type: 'text',
+      text: 'You are subject L (BLS Group 3-4) . Press any key to continue.'
+    };
+    
+    var if_trial_M = {
+      type: 'text',
+      text: 'You are subject M (BLS Group 4-1) . Press any key to continue.'
+    };
+    
+    var if_trial_N = {
+      type: 'text',
+      text: 'You are subject N (BLS Group 4-2) . Press any key to continue.'
+    };
+    
+    var if_trial_O = {
+      type: 'text',
+      text: 'You are subject O (BLS Group 4-3) . Press any key to continue.'
+    };
+    
+    var if_trial_P = {
+      type: 'text',
+      text: 'You are subject P (BLS Group 4-4) . Press any key to continue.'
+    };
+    
     var if_node_A = {
-      timeline: [if_trial_A],
+      timeline: [if_trial_A, if_trial_B],
       conditional_function: function(){
       var data = jsPsych.data.getLastTrialData();
       if(data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode('a')){
+        return true;
+      } else {
+          return false;
+        }
+        
+      if(data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode('b')){
         return true;
       } else {
           return false;
