@@ -361,11 +361,11 @@
       conditional_function: function(){
       var data = jsPsych.data.getLastTrialData();
       if(data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode('a')){
-        return true;
+        return timeline[0];
       } else {
           //return false;
         if(data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode('b')){
-        return true;
+        return timeline[1];
       } else {
           return false;
         }
