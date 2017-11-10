@@ -6,6 +6,8 @@
  *
  * documentation: docs.jspsych.org
  *
+ * competence level modifications by Shawn Tyler Schwartz, 2017
+ *
  */
 
 
@@ -18,7 +20,7 @@ jsPsych.plugins.similarity = (function() {
   plugin.trial = function(display_element, trial) {
 
     // default parameters
-    trial.labels = (typeof trial.labels === 'undefined') ? ["Not at all competent", "Ideally Competent"] : trial.labels;
+    trial.labels = (typeof trial.labels === 'undefined') ? ["Not at all competent", "Ideally competent"] : trial.labels;
     trial.intervals = trial.intervals || 100;
     trial.show_ticks = (typeof trial.show_ticks === 'undefined') ? false : trial.show_ticks;
 

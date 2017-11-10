@@ -11,6 +11,7 @@
     <script src="src/plugins/jspsych-survey-likert.js"></script>
     <script src="src/plugins/jspsych-single-stim.js"></script>
     <script src="src/plugins/jspsych-similarity.js"></script>
+    <script src="src/plugins/jspsych-suitability.js"></script>
     <link rel="stylesheet" href="src/css/jquery-ui.css"></link>
     <link rel="stylesheet" href="src/css/jspsych.css"></link>
   </head>
@@ -214,7 +215,7 @@
     };
     
     var scale_rate_resume_one = {
-      type: 'similarity',
+      type: 'suitability',
       stimuli: ['src/resumes/stimuli/NW_M_JohnCurtis.jpg', 'src/resumes/stimuli/NW_M_JohnCurtis.jpg'],
       prompt: '<p class="center-content">Overall, how competent is this applicant for the job?</p>'
     };
