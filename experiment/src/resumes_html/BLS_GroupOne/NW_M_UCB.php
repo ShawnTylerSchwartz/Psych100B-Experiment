@@ -19,7 +19,7 @@
       <strong>Harvard Law School</strong>, Cambridge, MA, J.D., June 2017
       <br />Activies: Harvard Law Students Association, <em>Co-President</em>, Harvard Human Rights Journal, <em>Member</em>
       <br /><br />
-      <?php include('UCB_template.php'); ?>
+      <center><?php include('UCB_template.php'); ?></center>
     </div>
   </body>
 </html>
