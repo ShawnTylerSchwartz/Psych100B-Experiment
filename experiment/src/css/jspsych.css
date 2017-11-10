@@ -34,6 +34,11 @@ p {
   font-size: 150%;
 }
 
+.resumeContainer {
+  width: 800px;
+  margin: 50px auto 50px auto;
+}
+
 /* Classes for changing location of things */
 
 .left {
