@@ -21,7 +21,7 @@
       <center>
         <h1>JOHN CURTIS</h1>
         <h3 style="margin-top: -5px;">48 Frederick St., Apartment 203 Cambridge, MA 02138</h3>
-        <h4 style="margin-top: -10px; margin-bottom: -10px;">jcooper@hls.harvard.edu &bull; 978-555-4422</h4>
+        <h4 style="margin-top: -5px; margin-bottom: -10px;">jcooper@hls.harvard.edu &bull; 978-555-4422</h4>
       </center>
       <br /><br />
       <strong style="font-size: 22px;">EDUCATION</strong>
