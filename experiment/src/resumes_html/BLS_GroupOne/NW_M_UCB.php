@@ -15,6 +15,7 @@
   </head>
   <body>
     <div class="container">
+      <br />
       <center>
         <img src="../../stimuli/NW_M_JohnCurtis.jpg" />
       </center>
@@ -30,7 +31,7 @@
       <br />Activies: Harvard Law Students Association, <em>Co-President</em>, Harvard Human Rights Journal, <em>Member</em>
       <br /><br />
       <?php include('UCB_template.php'); ?>
-      <br />
+      <br /><br />
     </div>
   </body>
 </html>
