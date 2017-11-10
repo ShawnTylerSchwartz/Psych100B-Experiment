@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <div id="jspsych-target"></div>
+    <div id="jspsych-target-1-1"></div>
   </body>
   
   <script>
@@ -254,7 +254,7 @@
     };
 
     jsPsych.init({
-      display_element: $('#jspsych-target'),
+      display_element: $('#jspsych-target-1-1'),
 //      timeline: [intro_instructions_block, consent_block, questions_block_one, questions_block_two, questions_block_three, questions_block_four, questions_block_five, questions_block_six, questions_block_seven, likert_block_one, likert_block_two, likert_block_three, likert_block_four, post_survey_instructions_block, resume_male_normalweight], 
       timeline: [resume_male_normalweight],
       on_finish: function(){ jsPsych.data.displayData(); }
