@@ -359,15 +359,15 @@
     var tri_texts = [ if_trial_A, if_trial_B ];
     
     var if_node_A = {
-      timeline: [if_trial_A, if_trial_B],
+      timeline: [],
       conditional_function: function(){
       var data = jsPsych.data.getLastTrialData();
       if(data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode('a')){
-        return tri_texts[0];
+        return timeline.push(tri_texts[0]);
       } else {
           //return false;
         if(data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode('b')){
-        return tri_texts[1];
+        return timeline.push(tri_texts[1]);
       } else {
           return false;
         }
