@@ -13,6 +13,7 @@
     <script src="src/plugins/jspsych-similarity.js"></script>
     <script src="src/plugins/jspsych-competence.js"></script>
     <script src="src/plugins/jspsych-suitability.js"></script>
+    <script src="src/plugins/jspsych-text.js"></script>
     <link rel="stylesheet" href="src/css/jquery-ui.css"></link>
     <link rel="stylesheet" href="src/css/jspsych.css"></link>
   </head>
@@ -262,12 +263,48 @@
       stimuli: ['src/resumes/stimuli/OW_F_JillCarter.jpg', 'src/resumes/stimuli/OW_F_JillCarter.jpg'],
       prompt: '<p class="center-content">Overall, how suitable is this applicant for the job?</p>'
     };
+    
+    var subj_num_questions = [ "What subject number are you?" ];
+    
+    var subj_number_input = {
+      type: 'survey-text',
+      questions: subj_num_questions
+    };
+    
+    var pre_if_trial = {
+      type: 'text',
+      text: 'The next trial is in a conditional statement. Press S to skip it, or V to view it.'
+    };
+    
+    var if_trial = {
+      type: 'text',
+      text: 'You chose to view the trial. Press any key to continue.'
+    };
+    
+    var if_node = {
+      timeline: [if_trial],
+      conditional_function: function(){
+      var data = jsPsych.data.getLastTrialData();
+      if(data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode('s')){
+        return false;
+      } else {
+          return true;
+        }
+      } 
+    };
+    
+    var after_if_trial = {
+      type: 'text',
+      text: 'This is the trial after the conditional.'
+    };
+
 
 
     jsPsych.init({
       display_element: $('#jspsych-target'),
 //      timeline: [intro_instructions_block, consent_block, questions_block_one, questions_block_two, questions_block_three, questions_block_four, questions_block_five, questions_block_six, questions_block_seven, likert_block_one, likert_block_two, likert_block_three, likert_block_four, post_survey_instructions_block, resume_male_normalweight], 
-      timeline: [resume_male_normalweight, likert_resume_one, likert_resume_two, likert_resume_three, likert_resume_four, likert_resume_five, likert_resume_six, nw_m_competence, nw_m_suitability],
+//      timeline: [resume_male_normalweight, likert_resume_one, likert_resume_two, likert_resume_three, likert_resume_four, likert_resume_five, likert_resume_six, nw_m_competence, nw_m_suitability],
+      timeline: [pre_if_trial, if_node, after_if_trial],
       on_finish: function(){ jsPsych.data.displayData(); }
     });
   </script>
