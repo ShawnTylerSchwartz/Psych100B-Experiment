@@ -6,7 +6,7 @@
   <body>
     <div class="container">
       <?php
-        include('JohnCurtis.php');
+        include('JohnCurtis_template.php');
         include('UCB_template.php');
       ?>
     </div>
