@@ -18,7 +18,7 @@ jsPsych.plugins.similarity = (function() {
   plugin.trial = function(display_element, trial) {
 
     // default parameters
-    trial.labels = (typeof trial.labels === 'undefined') ? ["Not at all similar", "Identical"] : trial.labels;
+    trial.labels = (typeof trial.labels === 'undefined') ? ["Not at all competent", "Ideally Competent"] : trial.labels;
     trial.intervals = trial.intervals || 100;
     trial.show_ticks = (typeof trial.show_ticks === 'undefined') ? false : trial.show_ticks;
 
