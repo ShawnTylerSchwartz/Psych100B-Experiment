@@ -356,16 +356,18 @@
       text: 'You are subject P (BLS Group 4-4) . Press any key to continue.'
     };
     
+    var tri_texts = [ if_trial_A, if_trial_B ];
+    
     var if_node_A = {
       timeline: [if_trial_A, if_trial_B],
       conditional_function: function(){
       var data = jsPsych.data.getLastTrialData();
       if(data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode('a')){
-        return timeline[0];
+        return tri_texts[0];
       } else {
           //return false;
         if(data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode('b')){
-        return timeline[1];
+        return tri_texts[1];
       } else {
           return false;
         }
