@@ -1,12 +1,14 @@
-<?php include('consts.php'); ?>
+<?php include('experimental_consts.php'); ?>
     
+    // BLS Group C-1-3 (OW_M_CSUN, OW_F_SFSU, NW_F_STAN, NW_M_UCB)
+
     var seed = 1;
     function random() {
       var x = Math.sin(seed++) * 10000;
       return x - Math.floor(x);
     };
     
-    var bls_output = "BLS_GROUP_A-1";
+    var bls_output = "BLS_GROUP_C-1-3-";
     var rand_output = random();
     var the_dot = ".";
     var csv_name = "csv";
