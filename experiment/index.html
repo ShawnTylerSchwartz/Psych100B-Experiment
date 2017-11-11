@@ -1,263 +1,74 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <script src="src/js/jquery.min.js"></script>
-    <script src="src/jspsych.js"></script>
-    <script src="src/plugins/jspsych-instructions.js"></script>
-    <script src="src/plugins/jspsych-html.js"></script>
-    <script src="src/plugins/jspsych-survey-text.js"></script>
-    <script src="src/plugins/jspsych-survey-multi-choice.js"></script>
-    <script src="src/plugins/jspsych-survey-likert.js"></script>
-    <script src="src/plugins/jspsych-single-stim.js"></script>
-    <link rel="stylesheet" href="src/css/jspsych.css"></link>
-  </head>
+    <title>C.A.S. Psych 100B Experiment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <body>
-    <div id="jspsych-target"></div>
-  </body>
-  
-  <script>
-    var intro_instructions_block = {
-      type: 'instructions',
-      pages: [
-        'Welcome to the C.A.S. Psych 100B Experiment. When ready, click next to begin.',
-        'You will begin by answering a series of questions.',
-        'Your complete honesty in your answers is important for the validity of this study.',
-        'Please turn off all cell phones and distracting materials. Are you ready? Click Next Now.'
-      ],
-      show_clickable_nav: true
-    }
-
-    var check_consent = function(elem) {
-      if ($('#consent_checkbox').is(':checked')) {
-        return true;
-      } else {
-        alert("If you agree to all of the instructions presented wish to participate in our Psych 100B Experiment, you must check the box next to the statement 'I agree to participate in this Psych 100B Experiment.'");
-        return false;
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/6c45dbaf5a.js"></script>
+    <style type="text/css">
+      .expButton {
+        width: 78px !important;
       }
-      return false;
-    };
+    </style>
+  </head>
+  <body>
+    <br />
+    <center>
+      <h1 class="display-4">Welcome to the C.A.S. Psych 100B Lab Experiment</h1>
+      <medium class="text-muted">A Hand-Coded Experiment by Claire Locke, Ali Hepps, &amp; Shawn Schwartz</medium>
+    </center>
+    <div class="container">
+      <div class="md-col-3"><br /></div>
+      <div class="md-col-3">
+        <p><br /></p>
+        <div class="row">
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="A.php" role="button">A</a>
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">B</a>
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">C</a>
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">D</a>
+        </div>
+      </div>
+      <div class="md-col-3">
+        <p><br /></p>
+        <div class="row">
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">E</a>
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">F</a>
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">G</a>
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">H</a>
+        </div>
+      </div>
+      <div class="md-col-3">
+        <p><br /></p>
+        <div class="row">
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">I</a>
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">J</a>
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">K</a>
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">L</a>
+        </div>
+      </div>
+      <div class="md-col-3">
+        <p><br /></p>
+        <div class="row">
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">M</a>
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">N</a>
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">O</a>
+          <a class="btn btn-outline-primary btn-lg mx-auto expButton" href="experiment/" role="button">P</a>
+        </div>
+      </div>
+    </div>
 
-    var consent_block = {
-      "type": "html",
-      "force_refresh": true,
-      "url": "src/external_html/simple_consent.html",
-      "cont_btn": "start",
-      "check_fn": check_consent
-    }
+    <script type="text/javascript">
+      function start_exp ({
 
-    // All Question Set Arrays - Demographic Question Sets
-    var block_one_questions = [ "Age", "How many years have you been in college?", "What is your major?" ];
-    var block_two_questions = [ "Gender", "Race/Ethnicity" ];
-    var block_three_questions = [ "Do you have a job?" ];
-    var block_four_questions = [ "What is your pay rate in dollars per hour? (*Enter Number Only*)", "How many hours a week do you work? (*Enter Number Only*)" ];
-    var block_five_questions = [ "Have you eaten breakfast today?" ];
-    var block_six_questions = [ "When did you last have caffeine?" ];
-    var block_seven_questions = [ "How many hours did you sleep last night?" ];
+      });
+    </script>   
 
-    // All Question Scales
-    var gender_options = [ "Male", "Female", "Other" ];
-    var race_options = [ "White", "Hispanic/Latino", "African American", "American Indian", "Asian", "Other" ];
-    var yn_options = [ "Yes", "No" ];
-    var caf_options = [ "This Morning", "Yesterday Evening", "Yesterday Afternoon", "Yesterday Morning", "I haven't consumed caffeine in the last 48 hours." ];
-    var sleep_options = [ "0-2 Hours", "2-4 Hours", "4-6 Hours", "6-8 Hours", "8 or more Hours" ];
-
-    // Likert Question Scaling Sets - After the Demographic Question Sets
-    var happiness_scale_questions = [ "I am happy today." ];
-    var comfort_scale_questions = [ "I am comfortable at this moment in time." ];
-    var behere_scale_questions = [ "I would rather be somewhere else." ];
-    var judgemental_scale_question = [ "I follow the latest fashion trends." ];
-    var level_of_agreement_scale = [ "Strongly Disagree", "Disagree", "Somewhat Disagree", "Neither Agree Nor Disagree", "Somehwat Agree", "Agree", "Strongly Agree" ];
-
-
-    // TODO::For the distractor task give an accidentally embarrasing video and ask them how funny it is to them?
-
-    var questions_block_one = {
-      type: 'survey-text',
-      questions: block_one_questions
-    };
-
-    var questions_block_two = {
-      type: 'survey-multi-choice',
-      questions: block_two_questions,
-      options: [gender_options, race_options],
-      required: [true, true]
-    };
-    
-    var questions_block_three = {
-      type: 'survey-multi-choice',
-      questions: block_three_questions,
-      options: [yn_options],
-      required: [true]
-    };
-    
-    var questions_block_four = {
-      type: 'survey-text',
-      questions: block_four_questions
-    };
-    
-    var questions_block_five = {
-      type: 'survey-multi-choice',
-      questions: block_five_questions,
-      options: [yn_options],
-      required: [true]
-    };
-    
-    var questions_block_six = {
-      type: 'survey-multi-choice',
-      questions: block_six_questions,
-      options: [caf_options],
-      required: [true]
-    };
-    
-    var questions_block_seven = {
-      type: 'survey-multi-choice',
-      questions: block_seven_questions,
-      options: [sleep_options],
-      required: [true]
-    };
-    
-    var likert_block_one = {
-      type: 'survey-likert',
-      questions: happiness_scale_questions,
-      labels: [level_of_agreement_scale]
-    };
-    
-    var likert_block_two = {
-      type: 'survey-likert',
-      questions: comfort_scale_questions,
-      labels: [level_of_agreement_scale]
-    };
-    
-    var likert_block_three = {
-      type: 'survey-likert',
-      questions: behere_scale_questions,
-      labels: [level_of_agreement_scale]
-    };
-    
-    var likert_block_four = {
-      type: 'survey-likert',
-      questions: judgemental_scale_question,
-      labels: [level_of_agreement_scale]
-    };
-    
-    var post_survey_instructions_block = {
-      type: 'instructions',
-      pages: [
-        'You are now finished with the questions. Click next to continue.',
-        'You are the hiring manager at the <strong>McGullin Law Firm</strong>, one of the most reputable law firms in all of Southern California. You are looking for someone to replace one of your star employees who is preparing to retire later this year. You are hoping that this new employee will live up to the standards that your soon-to-be retired employee has set throughout their time at the firm. Click next to continue.',
-        'You have received the Curriculum Vitae\'s (CV\'s) of two applicants who are both extremely qualified for this position.',
-        'Please take as much time as you need to review the applicant\'s resume.',
-        'When you are done reviewing the resume, click next. You will not be able to go back to the resume after you click next.',
-        'Are you ready? Click next to begin.',
-        'You will now be presented with a resume for a job applicant to your <strong>law firm</strong>.'
-      ],
-      show_clickable_nav: true
-    };
-    
-//    var resume_male_normalweight = {
-//      "type": "html",
-//      "force_refresh": true,
-//      "url": "src/external_html/john_curtis.html",
-//      "cont_btn": "start"
-//    };
-//    
-//    var resume_male_overweight = {
-//      "type": "html",
-//      "force_refresh": true,
-//      "url": "src/external_html/jake_cooper.html",
-//      "cont_btn": "start"
-//    };
-//    
-//    var resume_female_normalweight = {
-//      "type": "html",
-//      "force_refresh": true,
-//      "url": "src/external_html/jane_conner.html",
-//      "cont_btn": "start"
-//    };
-//    
-//    var resume_female_overweight = {
-//      "type": "html",
-//      "force_refresh": true,
-//      "url": "src/external_html/jill_carter.html",
-//      "cont_btn": "start"
-//    };
-    
-//    var resume_male_normalweight = {
-//      stimulus: 'src/stimuli/STIM_M_NW.jpg',
-//    };
-//    
-//    var node = {
-//      type: 'single-stim',
-//      timeline: [resume_male_normalweight],
-//      choices: [89, 78], // Y or N
-//      prompt: '<p class="center-content">Have you seen this face before? Y or N.</p>',
-//      data: {
-//        node_data: true
-//      }
-//    };
-    
-    
-    // Stimulus Resume Likert Question Scaling Sets
-    var teamwork_ability = [ "How likely do you think this applicant will be at working with a team?" ];
-    var social_competence = [ "How likely do you think this applicant is socially competent?" ];
-    var job_efficiency = [ "How likely do you think this applicant will be efficient in the workplace?" ];
-    var intelligence = [ "How likely is it that this applicant is intelligent?" ];
-    var motivation = [ "How likely is it that this applicant is motivated?" ];
-    var leadership_skills = [ "How likely is it that this appicant has leadership skills?" ];
-    var likely_scale = [ "Extremely Unlikely", "Unlikely", "Neutral", "Likely", "Extremely Likely" ];
-    
-    var resume_male_normalweight = {
-      type: 'instructions',
-      pages: [
-        '<iframe src="https://psych.shawntylerschwartz.com/psych100b/experiment/src/resumes/BLS_Group_1/NW_M_UCB.php" width="100%" height="1850px" frameborder="0" scrolling="auto" />',
-        'You will now answer some questions regarding the resume that you just read. Click next to continue.'
-      ],
-      show_clickable_nav: true
-    };
-    
-    var likert_resume_male_normalweight_one = {
-      type: 'survey-likert',
-      questions: teamwork_ability,
-      labels: [likely_scale]
-    };
-    
-    var likert_resume_male_normalweight_two = {
-      type: 'survey-likert',
-      questions: social_competence,
-      labels: [likely_scale]
-    }
-    
-    var likert_resume_male_normalweight_three = {
-      type: 'survey-likert',
-      questions: job_efficiency,
-      labels: [likely_scale]
-    }
-    
-    var likert_resume_male_normalweight_four = {
-      type: 'survey-likert',
-      questions: intelligence,
-      labels: [likely_scale]
-    }
-    
-    var likert_resume_male_normalweight_five = {
-      type: 'survey-likert',
-      questions: motivation,
-      labels: [likely_scale]
-    }
-    
-    var likert_resume_male_normalweight_six = {
-      type: 'survey-likert',
-      questions: leadership_skills,
-      labels: [likely_scale]
-    }
-
-    jsPsych.init({
-      display_element: $('#jspsych-target'),
-//      timeline: [intro_instructions_block, consent_block, questions_block_one, questions_block_two, questions_block_three, questions_block_four, questions_block_five, questions_block_six, questions_block_seven, likert_block_one, likert_block_two, likert_block_three, likert_block_four, post_survey_instructions_block, resume_male_normalweight], 
-      timeline: [resume_male_normalweight],
-      on_finish: function(){ jsPsych.data.displayData(); }
-    });
-  </script>
-
+    <!-- JS Libs -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
 </html>
