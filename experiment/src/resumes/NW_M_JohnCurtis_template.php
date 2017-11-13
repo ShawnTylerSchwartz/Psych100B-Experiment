@@ -1,6 +1,6 @@
 <br />
 <center>
-  <img src="../stimuli/NW_M_JohnCurtis.jpg" />
+  <img src="../stimuli/NW_M_JohnCurtis.jpg" width="310px" height="465px" />
 </center>
 <center>
   <h1>JOHN CURTIS</h1>

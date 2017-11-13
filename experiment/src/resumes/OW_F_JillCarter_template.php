@@ -1,6 +1,6 @@
 <br />
 <center>
-  <img src="../stimuli/OW_F_JillCarter.jpg" />
+  <img src="../stimuli/OW_F_JillCarter.jpg" width="310px" height="465px" />
 </center>
 <center>
   <h1>JILL CARTER</h1>

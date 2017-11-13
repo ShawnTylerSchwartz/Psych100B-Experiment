@@ -1,6 +1,6 @@
 <br />
 <center>
-  <img src="../stimuli/OW_M_JakeCooper.jpg" />
+  <img src="../stimuli/OW_M_JakeCooper.jpg" width="310px" height="465px" />
 </center>
 <center>
   <h1>JAKE COOPER</h1>
