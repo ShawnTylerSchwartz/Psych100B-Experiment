@@ -9,7 +9,6 @@
     <script src="src/plugins/jspsych-survey-text.js"></script>
     <script src="src/plugins/jspsych-survey-multi-choice.js"></script>
     <script src="src/plugins/jspsych-survey-likert.js"></script>
-    <script src="src/plugins/jspsych-single-stim.js"></script>
     <script src="src/plugins/jspsych-similarity.js"></script>
     <script src="src/plugins/jspsych-competence.js"></script>
     <script src="src/plugins/jspsych-suitability.js"></script>
