@@ -20,7 +20,7 @@ jsPsych.plugins.suitability = (function() {
   plugin.trial = function(display_element, trial) {
 
     // default parameters
-    trial.labels = (typeof trial.labels === 'undefined') ? ["Not at all suitable (0%)", "Neutral&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />(50%)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", "Ideally suitable (100%)"] : trial.labels;
+    trial.labels = (typeof trial.labels === 'undefined') ? ["Not at all suitable (0%)", "Neutral&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />(50%)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", "Ideally suitable (100%)"] : trial.labels;
     trial.intervals = trial.intervals || 100;
     trial.show_ticks = (typeof trial.show_ticks === 'undefined') ? false : trial.show_ticks;
 
