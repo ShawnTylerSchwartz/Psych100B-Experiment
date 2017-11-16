@@ -20,7 +20,7 @@ jsPsych.plugins.suitability = (function() {
   plugin.trial = function(display_element, trial) {
 
     // default parameters
-    trial.labels = (typeof trial.labels === 'undefined') ? ["Not at all suitable (0%)", "Ideally suitable (100%)"] : trial.labels;
+    trial.labels = (typeof trial.labels === 'undefined') ? ["Not at all suitable (0%)", "Neutral (50%)", "Ideally suitable (100%)"] : trial.labels;
     trial.intervals = trial.intervals || 100;
     trial.show_ticks = (typeof trial.show_ticks === 'undefined') ? false : trial.show_ticks;
 
@@ -165,7 +165,7 @@ jsPsych.plugins.suitability = (function() {
           'padding': '0px',
           'text-align': 'center',
           'position': 'absolute',
-          'left': (spacing_interval * index) - (item_width / 2)
+          'left': (spacing_interval * index) - (item_width / 3)
         });
       });
 
