@@ -2,10 +2,9 @@
     
     // BLS Group D-1-4 (OW_F_SFSU, NW_M_UCB, OW_M_CSUN, NW_F_STAN)
 
-    var seed = 1;
     function random() {
-      var x = Math.sin(seed++) * 10000;
-      return x - Math.floor(x);
+      var x = Math.random();
+      return x;
     };
     
     var bls_output = "BLS_GROUP_D-1-4-";

@@ -2,10 +2,9 @@
     
     // BLS Group G-2-3 (OW_M_STAN, OW_F_CSUN, NW_F_UCB, NW_M_SFSU)
 
-    var seed = 1;
     function random() {
-      var x = Math.sin(seed++) * 10000;
-      return x - Math.floor(x);
+      var x = Math.random();
+      return x;
     };
     
     var bls_output = "BLS_GROUP_G-2-3-";
