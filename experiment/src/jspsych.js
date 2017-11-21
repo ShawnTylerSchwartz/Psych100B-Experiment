@@ -752,16 +752,6 @@ jsPsych.data = (function() {
 
     $('#jspsych-data-display').text(data_string);
   };
-  
-  module.displayFinishMessage = function() {
-    var finish_message = 'Thank you for taking our Psych 100B study. Have a nice day.';
-    
-    var display_finish_message = jsPsych.getDisplayElement();
-    
-    display_finish_message.append($('<pre id="jspsych-finish-msg-display"></pre>'));
-    
-    $('#jspsych-finish-msg-display').text(finish_message);
-  };
 
   module.urlVariables = function() {
     return query_string;
