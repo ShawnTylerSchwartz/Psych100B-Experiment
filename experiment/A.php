@@ -2,10 +2,9 @@
     
     // BLS Group A-1-1 (NW_M_UCB, NW_F_STAN, OW_F_SFSU, OW_M_CSUN)
 
-    var seed = 1;
     function random() {
-      var x = Math.sin(seed++) * 10000;
-      return x - Math.floor(x);
+      var x = Math.random();
+      return x;
     };
     
     var bls_output = "BLS_GROUP_A-1-1-";
