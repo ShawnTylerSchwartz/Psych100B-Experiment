@@ -31,8 +31,8 @@ attached to each column.
 
 <hr />
 
-<br />
 &copy; Shawn Tyler Schwartz, 2017
+<br />
 *Examining Effects of Body Weight Bias and Gender Bias in Hiring Decisions*
 <br />
 *Shawn T. Schwartz, Claire M. Locke, and Ali E. Hepps*
