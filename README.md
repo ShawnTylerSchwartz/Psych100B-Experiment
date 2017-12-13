@@ -12,6 +12,7 @@ Executable Experiment Site: [https://psych.shawntylerschwartz.com/psych100b](htt
 
 # Abstract
 Differences in gender and weight were examined in perceived hire-ability ratings, in the context of potential job applicants and how ideally suitable for the job they are. Normal weight females received higher hire-ability ratings than overweight females. Females were also more likely to be hired than males, regardless of weight. In contrast, normal weight males revealed hire-ability scores not significant to differences in scores obtained by overweight males applying for the same job. Together, these findings suggest that intraspecific gender discrimination for weight in females, during the earliest stages of the hiring process––analysis of the resume––may be affecting fair hiring practices for qualified job applicants.
+<br />
 &nbsp;&nbsp;&nbsp;&nbsp;*Keywords: resume, hiring biases, gender, normal weight, overweight, workplace, equality*
 
 # Results
@@ -28,9 +29,10 @@ attached to each column.
 * Flint, S. W., Čadek, M., Codreanu, S. C., Ivić, V., Zomer, C., & Gomoiu, A. (2016). Obesity discrimination in the recruitment process: “You’re Not Hired!”. Frontiers in Psychology, 7(647), 1-9. https://doi.org/10.3389/fpsyg.2016.00647 
 * Tyler, J. M., & McCullough, J. D. (2009). Violating prescriptive stereotypes on job resumes: A self-presentational perspective. Management Communication Quarterly, 23(2), 272-287. https://doi.org/10.1177/089331890341412
 
+<hr />
+
+<br />
 &copy; Shawn Tyler Schwartz, 2017
-<br />
-<br />
 *Examining Effects of Body Weight Bias and Gender Bias in Hiring Decisions*
 <br />
 *Shawn T. Schwartz, Claire M. Locke, and Ali E. Hepps*
