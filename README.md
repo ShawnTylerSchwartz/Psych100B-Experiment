@@ -52,7 +52,7 @@ jsPsych.init({
     });
 ```
 **Main Saving Script**
-```php
+```javascript
     var bls_output = "BLS_GROUP_A/B/C/D-X-Y-";
     var rand_output = random();
     var the_dot = ".";
