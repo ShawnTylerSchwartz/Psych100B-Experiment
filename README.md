@@ -1,13 +1,14 @@
 # Examining Effects of Body Weight Bias and Gender Bias in Hiring Decisions
-## Resume Bias Experiment UCLA, Psych 100B Fall 2017
-### RB-CAS-EXP-UCLA PSY-100B Experiment
-Ali, Claire, and Shawn's UCLA PSY-100B Experiment Code
+### Psychology 100B – Fall 2017
 
-Author: (c) Shawn Tyler Schwartz, 2017 
+Author: (c) Shawn Tyler Schwartz, 2017
+<br />
 Website: [https://shawntylerschwartz.com](https://shawntylerschwartz.com)
+<br />
 Executable Experiment Site: [https://psych.shawntylerschwartz.com/psych100b](https://psych.shawntylerschwartz.com/psych100b)
+<br />
 
-**WARNING:** This experiment is sole property of Shawn Tyler Schwartz and associated groups in the Psychology Department at the University of California, Los Angeles (UCLA). *Unauthorized use, plaigarism, or other acts of improper academic **disonesty** are prohibited and will be reported as this experimental code isn't authorized to be executed except by Shawn Tyler Schwartz*
+**WARNING:** This experiment is sole property of Shawn Tyler Schwartz and associated groups in the Psychology Department at the **University of California, Los Angeles (UCLA)**. *Unauthorized use, plaigarism, or other acts of improper academic **disonesty** are prohibited and will be reported as this experimental code isn't authorized to be executed except by Shawn Tyler Schwartz*
 
 # Abstract
 Differences in gender and weight were examined in perceived hire-ability ratings, in the context of potential job applicants and how ideally suitable for the job they are. Normal weight females received higher hire-ability ratings than overweight females. Females were also more likely to be hired than males, regardless of weight. In contrast, normal weight males revealed hire-ability scores not significant to differences in scores obtained by overweight males applying for the same job. Together, these findings suggest that intraspecific gender discrimination for weight in females, during the earliest stages of the hiring process––analysis of the resume––may be affecting fair hiring practices for qualified job applicants.
@@ -28,6 +29,11 @@ attached to each column.
 * Tyler, J. M., & McCullough, J. D. (2009). Violating prescriptive stereotypes on job resumes: A self-presentational perspective. Management Communication Quarterly, 23(2), 272-287. https://doi.org/10.1177/089331890341412
 
 &copy; Shawn Tyler Schwartz, 2017
+<br />
+<br />
 *Examining Effects of Body Weight Bias and Gender Bias in Hiring Decisions*
+<br />
 *Shawn T. Schwartz, Claire M. Locke, and Ali E. Hepps*
+<br />
 *University of California, Los Angeles*
+<br />
