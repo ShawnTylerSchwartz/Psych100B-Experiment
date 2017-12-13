@@ -53,7 +53,7 @@ jsPsych.init({
 ```
 **Main Saving Script**
 ```php
-    var bls_output = "BLS_GROUP_B-1-2-";
+    var bls_output = "BLS_GROUP_A/B/C/D-X-Y-";
     var rand_output = random();
     var the_dot = ".";
     var csv_name = "csv";
